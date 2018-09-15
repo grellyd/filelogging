@@ -94,7 +94,7 @@ func (l *Logger) Log(givenLevel level.Level, data string) {
 		}
 	case level.INFO:
 		if l.state != state.QUIET {
-			fmt.Println(data)
+			l.log.Print(logString)
 		}
 	default:
 		if l.state != state.QUIET {
